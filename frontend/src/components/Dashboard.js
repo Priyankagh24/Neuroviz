@@ -30,7 +30,7 @@ const Dashboard = ({ data, onAnalysisComplete, showCleaned, userMode }) => {
     formData.append("file", file);
     try {
       const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
-const response = await axios.post(`${API_URL}/analyze`, formData);
+      const response = await axios.post(`${API_URL}/analyze`, formData);
       onAnalysisComplete(response.data); 
     } catch (err) {
       console.error(err);
